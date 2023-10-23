@@ -14,11 +14,11 @@ class Cardioid:
         
         for i in range(self.num_lines):
             theta = (2 * math.pi / self.num_lines) * i
-            x[0] = int(self.radius * math.cos(theta))
-            y[0] = int(self.radius * math.sin(theta))
+            x[0] = int(self.radius * math.cos(theta)) + self.translate[0]
+            y[0] = int(self.radius * math.sin(theta)) + self.translate[1]
             
-            x[1] = int(self.radius * math.cos(2 * theta))
-            y[1] = int(self.radius * math.sin(2 * theta))
+            x[1] = int(self.radius * math.cos(2 * theta)) + self.translate[0]
+            y[1] = int(self.radius * math.sin(2 * theta)) + self.translate[1]
             
             pygame.draw.aaline(self.app.screen, 'green', (x[0], y[0]), (x[1], y[1]))
 
