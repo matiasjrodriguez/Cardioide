@@ -1,5 +1,12 @@
 import pygame
 
+class Cardioid:
+    def __init__(self, app):
+        pass
+    
+    def draw(self):
+        pass
+
 class App:
     def __init__(self):
         self.screen = pygame.display.set_mode([1600, 900])
