@@ -9,3 +9,12 @@ class App:
         self.screen.fill('black')
         pygame.display.flip()
         
+    def run(self):
+        run = True
+        while run:
+            self.draw()
+            for i in pygame.event.get():
+                if i.type == pygame.QUIT:
+                    run = False
+            self.clock.tick(60)
+            
