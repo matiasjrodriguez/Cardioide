@@ -15,6 +15,7 @@ class App:
         
     def draw(self):
         self.screen.fill('black')
+        self.cardioid.draw()
         pygame.display.flip()
         
     def run(self):
