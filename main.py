@@ -1,4 +1,5 @@
 import pygame
+import math
 
 class Cardioid:
     def __init__(self, app):
@@ -7,7 +8,18 @@ class Cardioid:
         self.num_lines = 200
     
     def draw(self):
-        pass
+        x = [0,0]
+        y = [0,0]
+        
+        for i in range(self.num_lines):
+            theta = (2 * math.pi / self.num_lines) * i
+            x[0] = int(self.radius * math.cos(theta))
+            y[0] = int(self.radius * math.sin(theta))
+            
+            x[1] = int(self.radius * math.cos(2 * theta))
+            y[1] = int(self.radius * math.sin(2 * theta))
+            
+            pygame.draw.aaline(self.app.screen, 'green', (x[0], y[0]), (x[1], y[1]))
 
 class App:
     def __init__(self):
@@ -28,4 +40,4 @@ class App:
                 if i.type == pygame.QUIT:
                     run = False
             self.clock.tick(60)
-            
+App().run()            
