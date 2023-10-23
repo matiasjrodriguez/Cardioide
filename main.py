@@ -6,7 +6,7 @@ class Cardioid:
         self.app = app
         self.radius = 400
         self.num_lines = 200
-        self.translate = self.app.screen.get_width() // 2, self.app.screen.get_height // 2
+        self.translate = self.app.screen.get_width() // 2, self.app.screen.get_height() // 2
     
     def draw(self):
         x = [0,0]
