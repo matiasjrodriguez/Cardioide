@@ -11,6 +11,7 @@ class App:
     def __init__(self):
         self.screen = pygame.display.set_mode([1600, 900])
         self.clock = pygame.time.Clock()
+        self.cardioid = Cardioid(self)
         
     def draw(self):
         self.screen.fill('black')
