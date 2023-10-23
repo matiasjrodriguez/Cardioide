@@ -2,7 +2,9 @@ import pygame
 
 class Cardioid:
     def __init__(self, app):
-        pass
+        self.app = app
+        self.radius = 400
+        self.num_lines = 200
     
     def draw(self):
         pass
